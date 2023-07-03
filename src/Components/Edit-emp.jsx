@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Navbar } from "../Navbar";
+import Navbar from './Navbar';
 import { useSearchParams } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
 
 
 function Editemloye() {
@@ -44,6 +45,7 @@ function Editemloye() {
 
 
     const Formsubmit = async (e) => {
+        toast.success("User Updated")
         const response = await fetch(`http://localhost:8080/employee/${e}`, {
             method: 'PATCH',
         body: JSON.stringify({
@@ -62,6 +64,7 @@ function Editemloye() {
     return (
         <>
         <Navbar/>
+        <ToastContainer position="top-right"/>
             <section id="employe-form">
                 <h1>Employe-update</h1>
                 <div className="form-wrapper">

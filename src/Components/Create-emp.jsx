@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar } from "../Navbar";
+import  Navbar  from "./Navbar";
 import { ToastContainer, toast } from 'react-toastify';
 
 function CreateEmploye() {
@@ -51,7 +51,6 @@ function CreateEmploye() {
                                 placeholder="Enter your name"
                                 type="text"
                               name="name"
-                              pattern="[a-zd.]{5,} "
                               required
                             />
                              <span class="icon"></span>
